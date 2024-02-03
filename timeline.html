@@ -1,0 +1,227 @@
+<html>
+    <head>
+        <title>timeline</title>
+       </head>
+    <body>
+        <section id="timeline">
+            <div class="item1">
+                <div class="t1_yr">
+                    <p><b>1890</b></p>
+                </div>
+                <div class="t1_content">
+                    <h1>Birth</h1>
+                    <img src="tybg1.jpg" width="190px" height="200px" >
+                    <p>Agatha Mary Clarissa Miller, born on 15 September 1890 in Torquay, Devon, to wealthy parents Frederick Alvah Miller and Clarissa Margaret "Clara" Miller, née Boehmer, was the youngest of three children.</p>
+                </div>
+            </div>
+            <div class="item1">
+                <div class="t1_yr">
+                    <p><b>1901</b></p>
+                </div>
+                <div class="t1_content">
+                    <h1>Childhood</h1>
+                    <img src="tybg2.jpg" width="190px" height="200px" >
+                    <p>As an adolescent, she enjoyed works by Anthony Hope, Walter Scott, Charles Dickens, and Alexandre Dumas.In April 1901, aged 10, she wrote her first poem, "The Cow Slip".</p>
+                </div>
+            </div>
+            <div class="item1">
+                <div class="t1_yr">
+                    <p><b>1908</b></p>
+                </div>
+                <div class="t1_content">
+                    <h1>Prelude</h1>
+                    <img src="tybg3.jpg" width="190px" height="200px" >
+                    <p>At 18, recovering from illness, Christie wrote her debut story, "The House of Beauty," exploring "madness and dreams," topics of fascination. Concurrently, she initiated her initial novel, "Snow Upon the Desert."</p>
+                </div>
+            </div>
+            <div class="item1">
+                <div class="t1_yr">
+                    <p><b>1912</b></p>
+                </div>
+                <div class="t1_content">
+                    <h1>Love</h1>
+                    <img src="tybg4.jpg" width="190px" height="200px" >
+                    <p>In October 1912, she was introduced to Archibald "Archie" Christie at a dance,the couple quickly fell in love. Three months after their first meeting, Archie proposed marriage, and Agatha accepted.</p>
+                </div>
+            </div>
+            <div class="item1">
+                <div class="t1_yr">
+                    <p><b>1926</b></p>
+                </div>
+                <div class="t1_content">
+                    <h1>Vanishing</h1>
+                    <img src="tybg5.jpg" width="190px" height="200px" >
+                    <p>In August,Archie requested a divorce and Christie vanished from their Sunningdale home.On December,she was found at the Swan Hydropathic Hotel in Harrogate,diagnosed with an "unquestionable genuine loss of memory."</p>
+                </div>
+            </div>
+            <div class="item1">
+                <div class="t1_yr">
+                    <p><b>1934</b></p>
+                </div>
+                <div class="t1_content">
+                    <h1>Epitome</h1>
+                    <img src="tybg7.png" width="190px" height="200px" >
+                    <p>In 1934, Christie used her international train travels for Murder on the Orient Express. The Pera Palace Hotel in Istanbul, the railway's eastern terminus, claims the book's authorship, preserving Christie's room as a memorials.</p>
+                </div>
+            </div>
+            <div class="item1">
+                
+                <div class="t1_yr">
+                    <p><b>1976</b></p>
+                </div>
+                <div class="t1_content">
+                    <h1>Death</h1>
+                    <img src="tybg8.jpg" width="190px" height="200px" >
+                    <p>Christie peacefully passed away at 85 on January 12 at Winterbrook House. The St. Martin's and the Savoy, staging The Mousetrap and a revival of Murder at the Vicarage, dimmed outside lights in her honor.</p>
+                </div>
+            </div>
+        </section>
+    </body>
+    <style>
+        body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16.7px;
+    line-height: 1.75;
+    padding-right:10px;
+}
+
+#timeline {
+    display: flex;
+    background-color: #b34f4f;
+
+    &:hover {
+        .item1 {
+            width: 20%;
+        }
+    }
+}
+
+.item1 {
+    transform: translate3d(0, 0, 0);
+    position: relative;
+    width: 25%;
+    height: 100vh;
+    min-height: 600px;
+    color: #ffffffef;
+    overflow: hidden;
+    transition: width 0.5s ease;
+
+    &:before,
+    &:after {
+        transform: translate3d(0, 0, 0);
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &:after {
+        background: transparentize(#000000, 0.15);
+        opacity: 1;
+        transition: opacity 0.5s ease;
+        content: "";  /* Added to generate the content */
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;  /* Ensuring it's above other elements */
+        background-size: cover;
+        background-position: center center;
+        filter: grayscale(100%);
+    }
+
+    &:before {
+        background: linear-gradient(
+            to bottom,
+            rgba(58, 17, 17, 0) 0%,
+            rgba(245, 10, 10, 0.253) 100%
+        );
+        z-index: 2;
+        opacity: 0;
+        transform: translate3d(0, 0, 0) translateY(50%);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    &:hover {
+        width: 40% !important;
+
+        &:after {
+            opacity: 1;
+            filter: grayscale(0%);
+        }
+
+        &:before {
+            opacity: 1;
+            transform: translate3d(0, 0, 0) translateY(0);
+            transition: opacity 1s ease, transform 1s ease 0.25s;
+        }
+
+        .tl_content {
+            opacity: 1;
+            transform: translateY(0);
+            transition: all 0.75s ease 0.5s;
+        }
+
+        .tl_bg {
+            filter: grayscale(2);
+        }
+    }
+}
+
+.tl_content {
+    transform: translate3d(0, 0, 0) translateY(25px);
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    margin: 0 1.618em;
+    top: 55%;
+    opacity: 0;
+
+    h1 {
+        font-family: "Pathway Gothic One", Helvetica Neue, Helvetica, Arial,
+            sans-serif;
+        text-transform: uppercase;
+        color: #052633;
+        font-size: 1.44rem;
+        font-weight: normal;
+    }
+}
+
+.tl_yr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 1;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+
+    p {
+        font-family: "Pathway Gothic One", Helvetica Neue, Helvetica, Arial,
+            sans-serif;
+        font-size: 1.728rem;
+        line-height: 0;
+        ;
+    }
+}
+
+.tl_bg {
+    transform: translate3d(0, 0, 0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    min-width: 30px;
+    min-height: 20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: filter 0.5s ease;
+    filter: grayscale(100%);
+}
+    </style>
+</html>

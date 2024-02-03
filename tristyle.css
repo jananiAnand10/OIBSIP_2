@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+.header {
+    font-family: "Great Vibes";
+    font-size: 6vh;
+    color: rgb(255, 255, 255);
+    background-image: url("headbg1.jpg");
+    background-size: 5500px 800px;
+    background-repeat: no-repeat;
+    font-style: bold;
+    margin-top: 0; /* Adjust as needed */
+    padding-top: 0;
+}
+.caption
+{
+    font-family: "playball";
+    color: rgb(255, 255, 255);
+    background-color:black;
+    font-size: 85px;
+    text-align: center;
+    padding:10px;
+}
+.topnav
+{
+    float:none;
+    background-color:black;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+   
+}
+.topnav a
+{
+    color: rgb(255, 255, 255);
+    font-size: 90px;
+    overflow: hidden;
+    padding-right:80px;
+    text-decoration: none;
+}
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .topnav a.active {
+    background-color: #b36363;
+    color: white;
+  }
+  .bioimg
+  {
+    background-color: rgba(0, 0, 0, 0.76);
+    margin: auto;
+    display:block;
+    
+   }
